@@ -1,7 +1,8 @@
 "use client"
 
-import ProjectTitle from "./ProjectTitle"
+
 import { ProjectShortDescription } from "./ProjectShortDescription";
+import { ProjectTitle } from "./ProjectTitle";
 
 
 export default function Project({project}: any){

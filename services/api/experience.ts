@@ -1,11 +1,11 @@
 import { Client } from "@notionhq/client";
-import { idProjectDB } from "../variable";
+import { idXpDB } from "../variable";
 import { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints";
 /**
- * Provides a list of projects.
+ * Provides a list of experience.
  * @example
  * ```ts
- * await getProjects();
+ * await getXP();
  * ```
  */
 
@@ -13,10 +13,10 @@ import { QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints"
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 
-export const getProjects = async () : Promise<QueryDatabaseResponse> =>{
-  if(idProjectDB){
+export const getXP = async () : Promise<QueryDatabaseResponse> =>{
+  if(idXpDB){
     const response = await notion.databases.query({
-      database_id: idProjectDB
+      database_id: idXpDB
     })
     return response as QueryDatabaseResponse
   }

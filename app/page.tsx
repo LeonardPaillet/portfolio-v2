@@ -1,3 +1,4 @@
+import { getXP } from "@/services/api/experience";
 import { getProjects } from "@/services/api/project";
 import Project from "@/src/components/Project";
 
@@ -6,7 +7,8 @@ import Project from "@/src/components/Project";
 
 export default async function Home() {
   const projects = await getProjects()
-  //console.log(projects.results)
+  const experiences = await getXP()
+  console.log(experiences.results)
   return (
     <div>
       <h1>Yo</h1>
