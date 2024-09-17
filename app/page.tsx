@@ -1,4 +1,5 @@
 import { getContactBlock } from "@/services/api/contact";
+import { getContextBlock } from "@/services/api/context";
 import { getXP } from "@/services/api/experience";
 import { getInformationBlock } from "@/services/api/information";
 import { getPresentationBlock } from "@/services/api/presentation";
@@ -15,6 +16,7 @@ export default async function Home() {
   const contact = await getContactBlock()
   const presentation = await getPresentationBlock()
   const information = await getInformationBlock()
+  const context = await getContextBlock()
   return (
     <div>
       <h1>Yo</h1>
@@ -25,7 +27,7 @@ export default async function Home() {
         </div>
         
       ))}
-      <TestComponent component={information}/>
+      <TestComponent component={context}/>
     </div>
   );
 }
