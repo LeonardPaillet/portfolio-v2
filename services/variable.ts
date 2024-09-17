@@ -4,7 +4,7 @@ export const url = process.env.API_NOTION
 
 export const idProjectDB = process.env.ID_PROJECT_DATABASE
 export const idXpDB = process.env.ID_XP_DATABASE
-export const idInfoBlock = process.env.ID_INFO_BLOCK
+export const idPresBlock = process.env.ID_PRES_BLOCK
 export const idContactBlock = process.env.ID_CONTACT_BLOCK
 
 export const headers = {
