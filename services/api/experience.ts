@@ -16,7 +16,13 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 export const getXP = async () : Promise<QueryDatabaseResponse> =>{
   if(idXpDB){
     const response = await notion.databases.query({
-      database_id: idXpDB
+      database_id: idXpDB,
+      sorts: [
+        {
+          "property" : "Période",
+          "direction" : "descending"
+        }
+      ]
     })
     return response as QueryDatabaseResponse
   }
