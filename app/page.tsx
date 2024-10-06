@@ -20,7 +20,7 @@ export default async function Home() {
   const context = await getContextBlock()
   return (
     <div>
-      <h1 className="bg-slate-100">Yo</h1>
+      <h1 className="bg-blue">Yo</h1>
       {projects.results.map((project, index)=>(
         <div key={index}>
           <Project project={project} />
