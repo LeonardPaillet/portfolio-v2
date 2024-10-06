@@ -19,15 +19,18 @@ export default async function Home() {
   const information = await getInformationBlock()
   const context = await getContextBlock()
   return (
-    <div>
-      <h1 className="bg-blue">Yo</h1>
-      {projects.results.map((project, index)=>(
-        <div key={index}>
-          <Project project={project} />
-          
+    <div className="px-72">
+      <h1 className="bg-blue">DÉCOUVRE MON UNIVERS</h1>
+      <section className="flex flex-col text-center items-center gap-4">
+        <h2 className="font-bold text-4xl">MES PROJETS</h2>
+        <div className="flex flex-wrap gap-4 justify-center">
+          {projects.results.map((project, index)=>(
+            <Project key={index} project={project} />                
+          ))}
         </div>
-        
-      ))}
+      </section>
+      
+      
       <Experience dataXP={experiences}/>
     </div>
   );
