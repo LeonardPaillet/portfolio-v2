@@ -4,8 +4,8 @@ export function formatDateToMonthYear(dateString : string) {
 
   // Tableau pour les mois en français
   const months = [
-    "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", 
-    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+    "Jan", "Fév", "Mars", "Avril", "Mai", "Juin", 
+    "Juil", "Août", "Sept", "Oct", "Nov", "Déc"
   ];
 
   // Récupérer le mois et l'année
