@@ -19,8 +19,11 @@ export default async function Home() {
   const information = await getInformationBlock()
   const context = await getContextBlock()
   return (
-    <div className="px-72">
-      <h1 className="bg-blue">DÉCOUVRE MON UNIVERS</h1>
+    <div className="px-72 flex flex-col gap-12">
+      <section className="flex flex-col text-center items-center gap-4">
+        <h1 className="bg-blue">DÉCOUVRE MON UNIVERS</h1>
+      </section>
+      
       <section className="flex flex-col text-center items-center gap-4">
         <h2 className="font-bold text-4xl">MES PROJETS</h2>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -29,9 +32,11 @@ export default async function Home() {
           ))}
         </div>
       </section>
+      <section className="flex flex-col text-center items-center gap-4">
+        <h2 className="font-bold text-4xl">MON PARCOURS</h2>
+        <Experience dataXP={experiences}/>
+      </section>
       
-      
-      <Experience dataXP={experiences}/>
     </div>
   );
 }
