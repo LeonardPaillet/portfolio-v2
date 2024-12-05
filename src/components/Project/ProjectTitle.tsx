@@ -6,6 +6,6 @@ export function ProjectTitle({projectName}: any){
 
   
   return(
-    <p>{name}</p>
+    <p className="font-semibold">{name}</p>
   )
 }

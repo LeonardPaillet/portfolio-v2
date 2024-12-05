@@ -5,6 +5,6 @@ export function ProjectShortDescription({projectDescription}: any){
     shortDescription = projectDescription.rich_text[0].plain_text
   }
   return(
-    <p>{shortDescription}</p>
+    <p className="font-light">{shortDescription}</p>
   )
 }
