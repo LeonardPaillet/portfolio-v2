@@ -9,7 +9,7 @@ export default function Experience({dataXP}: any){
   return(
     <div>
       <div className="flex flex-col gap-4">
-        {dataXP.results.map((xp, index : number)=>(
+        {dataXP.results.map((xp :any , index : number)=>(
           <XP key={index} data={xp}/>
           
         ))}

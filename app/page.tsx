@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <div className="px-72 flex flex-col gap-12">
       <section className="flex flex-col text-center items-center gap-4">
-        <h1 className="bg-blue">DÉCOUVRE MON UNIVERS</h1>
+        <h1 className="font-bold text-5xl">DÉCOUVRE MON UNIVERS</h1>
       </section>
       
       <section className="flex flex-col text-center items-center gap-4">
