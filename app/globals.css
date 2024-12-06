@@ -32,3 +32,29 @@ a{
   transition:0.3s
 }
 
+main{
+  padding-left: 18rem; /* 288px */
+  padding-right: 18rem; /* 288px */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* 48px */
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+h1,h2{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+h1{
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+}
+h2{
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
