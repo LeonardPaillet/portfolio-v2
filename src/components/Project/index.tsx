@@ -7,7 +7,8 @@ import { ProjectTitle } from "./ProjectTitle";
 
 export default function Project({project}: any){
 
-  console.log(project.properties)
+  //console.log(project.properties)
+  console.log(project.id)
   let nb_group = parseInt(project.properties.Groupe.select.name)
   //project.properties['Image pres'].files[0].file.url
   return(

@@ -2,7 +2,7 @@ export default function Header(){
   return(
     <header className="bg-blue flex justify-between items-center py-8 px-24 font-semibold text-md">
       <a href="/" className="flex gap-4 items-center">
-        <img src="./logo.svg" alt="Logo" width={"20%"}/>
+        <img src="../logo.svg" alt="Logo" width={"20%"}/>
         <p className="uppercase">Léonard Paillet</p>
       </a>
       <div className="flex gap-24 ">
