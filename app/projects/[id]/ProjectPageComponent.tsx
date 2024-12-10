@@ -1,9 +1,13 @@
 "use client"
+
+import { PageProjectBlock } from "@/src/components/Project/PageProjectBlock"
+
 export function ProjectPageComponent({project}: any){
-  console.log(project)
   return(
-    <div>
-      <h2>YOUOU</h2>
+    <div className="flex flex-col gap-2">
+      {project.results.map((block : any, index : number)=>(
+        <PageProjectBlock key={index} block={block} />                
+      ))}
     </div>
   )
 }
