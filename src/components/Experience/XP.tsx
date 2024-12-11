@@ -8,7 +8,7 @@ export async function XP({data} : any){
   //<XPDescribe data={descriptionPage}/>
   return(
     <div className="flex gap-4">
-      <XPBlock properties={data.properties}/>
+      <XPBlock properties={data.properties} id={data.id}/>
     </div>
   )
 }

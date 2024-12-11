@@ -1,6 +1,7 @@
 import { getPage, getPageBlock } from "@/services/api/page"
 import { removeHyphens } from "@/services/utils"
-import { ProjectPageComponent } from "./ProjectPageComponent";
+import { PageComponent } from "@/src/components/NotionBlockComponent/PageProjectBlock";
+
 
 export default async function ProjectPage({
   params,
@@ -36,7 +37,7 @@ export default async function ProjectPage({
           null
         }
         
-        <ProjectPageComponent project={projectBlock}/>
+        <PageComponent page={projectBlock}/>
       </section>
     </main>
   )

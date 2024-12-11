@@ -1,4 +1,15 @@
-export function PageProjectBlock({block} : any){
+export function PageComponent({page}: any){
+  return(
+    <div className="flex flex-col gap-2">
+      {page.results.map((block : any, index : number)=>(
+        <PageBlock key={index} block={block} />                
+      ))}
+    </div>
+  )
+}
+
+
+function PageBlock({block} : any){
   //console.log(block.type)
   switch(block.type){
     case "heading_1" : return <Heading1 block={block}/>;
