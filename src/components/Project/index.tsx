@@ -1,13 +1,16 @@
 "use client"
 
 
+import Link from "next/link";
 import { ProjectShortDescription } from "./ProjectShortDescription";
 import { ProjectTitle } from "./ProjectTitle";
 
 
 export default function Project({project}: any){
 
-  console.log(project.properties)
+  //console.log(project.properties)
+  console.log(project.id)
+  const link_project = "/projects/"+project.id
   let nb_group = parseInt(project.properties.Groupe.select.name)
   //project.properties['Image pres'].files[0].file.url
   return(
@@ -32,7 +35,9 @@ export default function Project({project}: any){
         
       </div>
       
-      <button className=" font-semibold border border-white border-4 rounded py-2 px-6 text-2xl"> En savoir plus</button>
+      <Link href={{
+        pathname: link_project,
+        }} className=" font-semibold border border-white border-4 rounded py-2 px-6 text-2xl"> En savoir plus</Link>
     </div>
   )
 }

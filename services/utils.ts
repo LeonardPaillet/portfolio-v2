@@ -15,3 +15,7 @@ export function formatDateToMonthYear(dateString : string) {
   // Retourner le format "Mois Année"
   return `${month} ${year}`;
 }
+
+export function removeHyphens(str : string){
+  return str.replace(/-/g, '');
+}

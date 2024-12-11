@@ -12,7 +12,7 @@ import { ListBlockChildrenResponse, QueryDatabaseResponse } from "@notionhq/clie
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 
-export const getPageBlock = async ({pageId} : any) : Promise<ListBlockChildrenResponse> =>{
+export const getPageBlock = async ({pageId} : {pageId: string}) : Promise<ListBlockChildrenResponse> =>{
   if(pageId){
     const response = await notion.blocks.children.list({
       block_id: pageId,
@@ -20,7 +20,18 @@ export const getPageBlock = async ({pageId} : any) : Promise<ListBlockChildrenRe
     return response as ListBlockChildrenResponse
   }
   else{
-    throw new Error("Database ID is undefined");
+    throw new Error("Page ID is undefined");
   }
-  
+}
+
+export const getPage = async ({pageId} : {pageId: string}) : Promise<any> =>{
+  if(pageId){
+    const response = await notion.pages.retrieve({
+      page_id: pageId,
+    })
+    return response as any
+  }
+  else{
+    throw new Error("Page ID is undefined");
+  }
 }
