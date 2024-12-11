@@ -62,11 +62,23 @@ function Paragraph({block} : any){
 }
 
 function BulletPoint({block} : any){
-  const bullet_point = block.bulleted_list_item.rich_text[0].plain_text
+  const bullet_point_array = block.bulleted_list_item.rich_text
   return(
     <div className="flex items-center gap-4">
       <span className="bg-lightBlue w-2 h-2 rounded"></span>
-      <ul>{bullet_point}</ul>
+      <ul>
+        {
+          bullet_point_array.map((text : any, index : number)=>(
+            text.text.link ? (
+              <a href={text.text.link.url} key={index} target="_blank" className="text-lightBlue">
+                {text.plain_text}
+              </a>
+            ) : 
+            text.plain_text
+                        
+          ))
+        }
+      </ul>
     </div>
     
   )
@@ -80,7 +92,6 @@ function ImageBlock({block} : any){
 
 function Callout({block} : any){
   const text = block.callout.rich_text[0].plain_text
-  console.log(block.callout)
   return(
     <div className="flex p-4 bg-grey rounded my-4 gap-4 border border-lightBlue">
       <p>{block.callout.icon.emoji}</p>
