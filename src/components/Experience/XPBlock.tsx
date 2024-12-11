@@ -1,7 +1,9 @@
 "use client"
 import { formatDateToMonthYear } from "@/services/utils"
 
-export function XPBlock({properties} : any){
+export function XPBlock({properties, id} : any){
+  console.log(id)
+  const link_xp = "/experiences/"+id
   return(
     <div className="flex flex-col gap-4 p-8 bg-white rounded text-grey font-medium w-[480px]">
       <h2 className="font-bold text-lg uppercase">{properties.Contrat.select.name} - {properties.Titre.title[0].plain_text}</h2>
@@ -11,7 +13,7 @@ export function XPBlock({properties} : any){
         <XPTimeSpend time={properties.Durée.rich_text[0].plain_text}/>
 
         <XPDates dates={properties.Période.date}/>
-        <a href="#" className="bg-darkBlue text-white text-center rounded py-2 hover:bg-darkViolet hover:scale-105">Voir plus</a>
+        <a href={link_xp} className="bg-darkBlue text-white text-center rounded py-2 hover:bg-darkViolet hover:scale-105">Voir plus</a>
       </div>
     </div>
   )
