@@ -18,7 +18,7 @@ export default async function ProjectPage({
   return(
     <main>
       <section>
-        <div className="flex gap-8 items-center">
+        <div className="flex flex-col sm:flex-row gap-8 items-center">
           <img src={logo} alt={"logo " +title} width={"150px"}/>
           <h1>{title}</h1>
         </div>
