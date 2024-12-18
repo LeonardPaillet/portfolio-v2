@@ -5,14 +5,9 @@ export default async function Contact(){
   const contactInfo =  await getContactBlock();
   return(
     <main>
-      <section>
+      <section className="h-screen">
         <h1>Contact</h1>
         <PageComponent page={contactInfo}/>
-        <div className="flex flex-wrap gap-8">
-          <InfoContactComponent text="Test"/>
-          <InfoContactComponent text="Test"/>
-          <InfoContactComponent text="Test"/>
-        </div>
       </section>
     </main>
   )
