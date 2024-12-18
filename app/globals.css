@@ -32,12 +32,14 @@ a{
   transition:0.3s
 }
 
+
 main{
-  padding-left: 18rem; /* 288px */
-  padding-right: 18rem; /* 288px */
+  padding-left: 2rem; 
+  padding-right: 2rem; 
   display: flex;
   flex-direction: column;
   gap: 3rem; /* 48px */
+  
 }
 section{
   display: flex;
@@ -62,3 +64,4 @@ h3{
   font-size: 1.5rem; /* 36px */
   line-height: 2.5rem; /* 40px */
 }
+
