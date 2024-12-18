@@ -1,6 +1,6 @@
 export function PageComponent({page}: any){
   return(
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 max-w-5xl">
       {page.results.map((block : any, index : number)=>(
         <PageBlock key={index} block={block} />                
       ))}
