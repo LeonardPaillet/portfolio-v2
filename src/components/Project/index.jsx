@@ -6,12 +6,11 @@ import { ProjectShortDescription } from "./ProjectShortDescription";
 import { ProjectTitle } from "./ProjectTitle";
 
 
-export default function Project({project}: any){
+export default function Project({project}){
 
   //console.log(project.properties)
-  console.log(project.id)
   const link_project = "/projects/"+project.id
-  let nb_group = parseInt(project.properties.Groupe.select.name)
+  const nb_group = parseInt(project.properties.Groupe.select.name)
   //project.properties['Image pres'].files[0].file.url
   return(
     <div className="bg-gradient-to-br from-darkViolet from-36% to-violet border border-white border-4 rounded w-[500px] h-[500px] p-8 text-start text-lg flex flex-col justify-between">

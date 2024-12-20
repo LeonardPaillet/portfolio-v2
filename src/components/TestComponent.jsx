@@ -1,5 +1,5 @@
 "use client"
-export function TestComponent({component}: any){
+export function TestComponent({component}){
   console.log(component)
   return(
     <div>

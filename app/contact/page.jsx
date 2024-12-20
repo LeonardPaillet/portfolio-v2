@@ -13,7 +13,8 @@ export default async function Contact(){
   )
 }
 
-function InfoContactComponent({text} : any){
+/*
+function InfoContactComponent({text}{
   return(
     <div className="w-36 h-36 bg-grey rounded-lg flex flex-col items-center justify-center shadow-inner border border-darkBlue">
       <div></div>
@@ -21,3 +22,4 @@ function InfoContactComponent({text} : any){
     </div>
   )
 }
+  */

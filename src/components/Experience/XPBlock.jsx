@@ -1,8 +1,7 @@
 "use client"
 import { formatDateToMonthYear } from "@/services/utils"
 
-export function XPBlock({properties, id} : any){
-  console.log(id)
+export function XPBlock({properties, id}){
   const link_xp = "/experiences/"+id
   return(
     <div className="flex flex-col gap-4 p-8 bg-white rounded text-grey font-medium w-[480px]">
@@ -19,7 +18,7 @@ export function XPBlock({properties, id} : any){
   )
 }
 
-function XPLocation({office, town} : any){
+function XPLocation({office, town}){
   return(
     <div className="flex items-center gap-4">
       <img src="./company.svg" alt="émoticones sac de travail" width={"8%"}/>
@@ -28,7 +27,7 @@ function XPLocation({office, town} : any){
   )
 }
 
-function XPTimeSpend({time} : any){
+function XPTimeSpend({time}){
   return(
     <div className="flex items-center gap-4">
       <img src="./hourglass.svg" alt="émoticones sablier" width={"8%"}/>
@@ -37,7 +36,7 @@ function XPTimeSpend({time} : any){
   )
 }
 
-function XPDates({dates} : any){
+function XPDates({dates}){
   return(
     <div className="flex items-center gap-4">
       <img src="./calendar.svg" alt="émoticones calendrier" width={"8%"}/>

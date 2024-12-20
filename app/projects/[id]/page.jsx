@@ -3,11 +3,7 @@ import { removeHyphens } from "@/services/utils"
 import { PageComponent } from "@/src/components/NotionBlockComponent/PageProjectBlock";
 
 
-export default async function ProjectPage({
-  params,
-} : {
-  params: { id: string };
-}){
+export default async function ProjectPage({params}){
   const id = removeHyphens(params.id);
   const projectBlock = await getPageBlock({pageId : id})
   const project = await getPage({pageId : id})
@@ -23,7 +19,7 @@ export default async function ProjectPage({
           <h1>{title}</h1>
         </div>
         <div className="flex gap-4">
-          {listTechno.map((tag : any, index : number)=>(
+          {listTechno.map((tag, index)=>(
             <TagComponent key={index} tag={tag} />                
           ))}
         </div>
@@ -43,12 +39,12 @@ export default async function ProjectPage({
   )
 }
 
-function TagComponent({tag} : any){
+function TagComponent({tag}){
   return(
     <div className=" rounded-xl border py-2 px-4 border-blue-300">{tag.name}</div>
   )
 }
-
+/*
 const webTechnologiesColors = {
   javascript: "border-yellow-400",  // jaune
   typescript: "text-blue-400",    // bleu clair
@@ -67,3 +63,4 @@ const webTechnologiesColors = {
   kotlin: "text-purple-600",      // violet foncé
   sql: "text-blue-300",           // bleu ciel
 };
+*/
