@@ -2,7 +2,7 @@ import { getPage, getPageBlock } from "@/services/api/page";
 import { removeHyphens } from "@/services/utils";
 import { PageComponent } from "@/src/components/NotionBlockComponent/PageProjectBlock";
 
-export default async function ExperiencePage({params}:{params: { id: string }}){
+export default async function ExperiencePage({params}){
   const id = removeHyphens(params.id);
   const experienceBlock = await getPageBlock({pageId : id})
   const experience = await getPage({pageId : id})

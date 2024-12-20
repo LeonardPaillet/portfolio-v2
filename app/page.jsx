@@ -1,12 +1,7 @@
-import { getContactBlock } from "@/services/api/contact";
-import { getContextBlock } from "@/services/api/context";
 import { getXP } from "@/services/api/experience";
-import { getInformationBlock } from "@/services/api/information";
-import { getPresentationBlock } from "@/services/api/presentation";
 import { getProjects } from "@/services/api/project";
 import Experience from "@/src/components/Experience";
 import Project from "@/src/components/Project";
-import { TestComponent } from "@/src/components/TestComponent";
 
 
 
@@ -14,10 +9,7 @@ import { TestComponent } from "@/src/components/TestComponent";
 export default async function Home() {
   const projects = await getProjects()
   const experiences = await getXP()
-  const contact = await getContactBlock()
-  const presentation = await getPresentationBlock()
-  const information = await getInformationBlock()
-  const context = await getContextBlock()
+  //console.log(experiences)
   return (
     <main>
       <section>

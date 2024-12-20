@@ -1,8 +1,8 @@
 "use client"
-export function XPDescribe({data} : any){
+export function XPDescribe({data} ){
   return(
     <div>
-      {data.results.map((lines : any, index : number)=>(
+      {data.results.map((lines, index)=>(
         <div key={index}>
           <IsHeading data={lines} />
           
@@ -13,7 +13,7 @@ export function XPDescribe({data} : any){
   )
 }
 
-function IsHeading({data} : any){
+function IsHeading({data}){
   
   //data.paragraph.rich_text[0].plain_text
   if(data.type === "paragraph"){
@@ -24,23 +24,14 @@ function IsHeading({data} : any){
   }
 }
 
-function Paragraph({data} :any){
-  console.log(data)
+function Paragraph({data}){
   return(
     <div>
-      {data.paragraph.rich_text.map((paragraph : any, index : number)=>(
+      {data.paragraph.rich_text.map((paragraph, index)=>(
         <p key={index}>
           {paragraph.plain_text}
         </p>
       ))}
     </div>
-  )
-}
-
-function Heading({data} : any){
-  return(
-    <h2>
-
-    </h2>
   )
 }

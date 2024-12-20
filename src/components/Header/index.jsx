@@ -48,13 +48,8 @@ export default function Header(){
   );
 }
 
-interface HeaderLinkProps{
-  url : string;
-  name : string;
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-}
 
-function HeaderLinks({url, name, onClick}: HeaderLinkProps){
+function HeaderLinks({url, name, onClick}){
   return(
     <a href={url} className="group hover:text-lightBlue duration-300" onClick={onClick}>
       {name}
