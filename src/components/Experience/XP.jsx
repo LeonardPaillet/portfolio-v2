@@ -1,4 +1,3 @@
-import { getPageBlock } from "@/services/api/page"
 import { XPBlock } from "./XPBlock"
 
 export async function XP({data}){

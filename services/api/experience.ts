@@ -15,7 +15,6 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 export const getXP = async () : Promise<QueryDatabaseResponse> =>{
   if(idXpDB){
-    console.log(idXpDB)
     const response = await notion.databases.query({
       database_id: idXpDB,
       sorts: [
