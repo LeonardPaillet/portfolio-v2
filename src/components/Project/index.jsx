@@ -17,7 +17,13 @@ export default function Project({project}){
   return(
     <div className="bg-gradient-to-br from-darkViolet from-36% to-violet border border-white border-4 rounded w-[500px] h-[500px] p-8 text-start text-lg flex flex-col justify-between">
       <div className="flex justify-center h-32 relative overflow-hidden">
-        <Image width={200} height={200} src={logo} alt={project.properties.Nom}/>
+        <Image
+          width={150}
+          height={400}
+          src={logo}
+          alt={project.properties.Nom}
+          className="h-full w-auto object-contain"
+        />
       </div>
       <div className="flex flex-col gap-4">
         <ProjectTitle projectName={project.properties.Nom}/>
