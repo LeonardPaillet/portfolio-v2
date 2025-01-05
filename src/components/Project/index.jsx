@@ -1,5 +1,3 @@
-"use client"
-
 
 import Link from "next/link";
 import { ProjectShortDescription } from "./ProjectShortDescription";
@@ -14,6 +12,10 @@ export default function Project({project}){
   const link_project = "/projects/"+project.id
   const nb_group = parseInt(project.properties.Groupe.select.name)
   const logo = project.properties['Image pres'].files[0].file.url
+  let name = "Pas de titre"
+  if(project.properties.Nom.title[0].text.content){
+    name = project.properties.Nom.title[0].text.content
+  }
   return(
     <div className="bg-gradient-to-br from-darkViolet from-36% to-violet border border-white border-4 rounded w-[500px] h-[500px] p-8 text-start text-lg flex flex-col justify-between">
       <div className="flex justify-center h-32 relative overflow-hidden">
@@ -21,7 +23,7 @@ export default function Project({project}){
           width={150}
           height={400}
           src={logo}
-          alt={project.properties.Nom}
+          alt={name}
           className="h-full w-auto object-contain"
         />
       </div>
