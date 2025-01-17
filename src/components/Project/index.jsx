@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ProjectShortDescription } from "./ProjectShortDescription";
 import { ProjectTitle } from "./ProjectTitle";
 
-import Image from 'next/image'
 
 
 export default function Project({project}){
