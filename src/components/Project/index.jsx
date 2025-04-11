@@ -16,7 +16,9 @@ export default function Project({project}){
     name = project.properties.Nom.title[0].text.content
   }
   return(
-    <div className="bg-gradient-to-br from-darkViolet from-36% to-violet border border-white border-4 rounded w-[500px] h-[500px] p-8 text-start text-lg flex flex-col justify-between">
+    <div className="bg-gradient-to-br from-darkViolet from-36% to-violet border border-white border-4 rounded w-full h-[500px] p-4 text-start text-lg flex flex-col justify-between
+    sm:w-[500px] sm:p-8
+    ">
       <div className="flex justify-center h-32 relative overflow-hidden">
         <img src={logo} alt={name}
           className="h-full w-auto object-contain"/>
@@ -40,7 +42,9 @@ export default function Project({project}){
       
       <Link href={{
         pathname: link_project,
-        }} className=" font-semibold border border-white border-4 rounded py-2 px-6 text-2xl"> En savoir plus</Link>
+        }} className="font-semibold border border-white border-4 rounded py-2 px-2
+        sm:text-2xl sm:px-6
+        "> En savoir plus</Link>
     </div>
   )
 }
