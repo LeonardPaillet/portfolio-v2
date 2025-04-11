@@ -32,13 +32,26 @@ a{
 }
 
 
-main{
-  padding-left: 2rem; 
-  padding-right: 2rem; 
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* 48px */
-  
+  gap: 3rem;
+}
+
+@media (min-width: 640px) {
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
 section{
   display: flex;
