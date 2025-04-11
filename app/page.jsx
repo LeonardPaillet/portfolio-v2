@@ -19,10 +19,9 @@ export default async function Home() {
       <section>
         <h2>MES PROJETS</h2>
         <div className="flex flex-wrap gap-4 justify-center 2xl:px-44">
-          {projects.results.map((project, index)=>(
-            <Project key={index} project={project} />  
-                          
-          ))}
+        {projects.results.slice(0, 4).map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
         </div>
       </section>
       <section>
