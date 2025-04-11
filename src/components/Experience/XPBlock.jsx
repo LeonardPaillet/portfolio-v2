@@ -4,7 +4,9 @@ import { formatDateToMonthYear } from "@/services/utils"
 export function XPBlock({properties, id}){
   const link_xp = "/experiences/"+id
   return(
-    <div className="flex flex-col gap-4 p-8 bg-white rounded text-grey font-medium w-[480px]">
+    <div className="flex flex-col gap-4 p-8 bg-white rounded text-grey font-medium w-full
+    sm:w-[480px]
+    ">
       <h2 className="font-bold text-lg uppercase">{properties.Contrat.select.name} - {properties.Titre.title[0].plain_text}</h2>
       <div className="flex flex-col gap-6">
         <XPLocation office={properties.Structure.select.name} town={properties.Lieux.select.name}/>
