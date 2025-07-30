@@ -7,7 +7,7 @@ import { ProjectTitle } from "./ProjectTitle";
 
 export default function Project({project}){
 
-  console.log(project.properties['Url Image'].url)
+  //console.log(project.properties['Url Image'].url)
   const link_project = "/projects/"+project.id
   const nb_group = parseInt(project.properties.Groupe.select.name)
   const logo = project.properties['Url Image'].url
